@@ -1,0 +1,38 @@
+body {
+    background: #fff;
+    color: #7f8c8d;
+    font: 25px/33px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
+}
+
+.container {
+    margin: 40px auto 0;
+    max-width: 700px;
+}
+
+h1 {
+    color: #bdc3c7;
+    font: 45px/50px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#gen {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#gen li {
+    border-top: 1px solid #95a5a6;
+    margin: 10px 0 0;
+    padding: 10px 0 0;
+}
+
+#btn {
+    background: #e74c3c;
+    border: 0;
+    color: #fff;
+    font: 25px/33px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
+    margin-top: 20px;
+    outline: 0;
+}

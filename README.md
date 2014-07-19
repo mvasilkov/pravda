@@ -1,4 +1,2 @@
-RUSSKIE
-=======
-
-RUSSKIE
+Russkie simulator
+-----------------
