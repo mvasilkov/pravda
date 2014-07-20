@@ -216,5 +216,7 @@ BD = [
     person_prof+" нашел себе работу поинтереснее",
     national_plural+" умельцы собрали из мусора "+crafted,
     person+" назвал "+abs_quality+" идеалом русского народа"
+    person+" сказал, что "+national_plural+" власти подадут в суд на "+object_act_on+" из "+from_city+" за требование "+do_stuff,
+    crafted+" насчитал в "+where_biome+" у ополченцев 400 "+crippled,
 ]
 }())
