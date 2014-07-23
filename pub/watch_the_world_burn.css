@@ -1,19 +1,36 @@
-body {
+html {
+    font: 25px 'PT Sans Narrow', sans-serif;
     background: #fff;
+}
+body {
     color: #7f8c8d;
-    font: 25px/33px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
 }
 
-.container {
+#container, #header {
     margin: 40px auto 0;
     max-width: 700px;
 }
 
+#header {
+    padding-bottom: 50px;
+}
+
 h1 {
     color: #bdc3c7;
-    font: 45px/50px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
+    font: 45px;
     margin: 0;
     padding: 0;
+    float: left;
+}
+
+#btn {
+    background: #e74c3c;
+    border: 0;
+    color: #fff;
+    font: 25px/33px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
+    outline: 0;
+    margin-top: 15px;
+    float: right;
 }
 
 #gen {
@@ -28,11 +45,4 @@ h1 {
     padding: 10px 0 0;
 }
 
-#btn {
-    background: #e74c3c;
-    border: 0;
-    color: #fff;
-    font: 25px/33px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
-    margin-top: 20px;
-    outline: 0;
-}
+
