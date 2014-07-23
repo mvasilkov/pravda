@@ -2,6 +2,9 @@ var BD
 (function () {
 function mkt(variants) { return '#{' + variants.join('#') + '}' }
 function rnd(from, to) { return from + (Math.random() * (1+to-from)|0) }
+// lowercase first letter mkt()
+function lc1mkt(xs) { return mkt(xs.map(function (x) {
+    return x[0].toLowerCase()+x.substr(1) })) }
 
 var from_city = mkt([
     "Мурманска",
@@ -194,13 +197,18 @@ var crafted = mkt([
     "Храм Христа Спасителя"
 ])
 
-var person = mkt([
+var raw_person = [
     "Патриарх Московский и всея Руси Кирилл",
     "Великий русский писатель Александр Сергеевич Пушкин",
     "Исламский пророк Мухаммад",
     "Князь тьмы Сатана",
-    "Депутат «Справедливой России» Олег Пахолков"
-])
+    "Депутат «Справедливой России» Олег Пахолков",
+    "Канцлер Германии Ангела Меркель",
+    "Генеральный директор Первого канала Константин Эрнст"
+]
+
+var person = mkt(raw_person)
+var lc1person = lc1mkt(raw_person)
 
 var person_generic = mkt([
     national+" "+profession,
@@ -258,6 +266,7 @@ BD = [
     "Жительница "+from_city+" ударила пенсионерку "+hit_with+" за осуждающий взгляд",
     national+" "+profession+" насчитал в плену у ополченцев "+rnd(10, 40)+"0 человек",
     cap_enemies+" "+did_action_object+" в православном храме "+from_city,
-    "В Туркменистане в рамках возрождения национальной культуры отменена письменность"
+    // "В Туркменистане в рамках возрождения национальной культуры отменена письменность",
+    "По сообщениям МИД РФ, "+lc1person+" съебал из сраной Рашки, спиздив сраный "+crafted
 ]
 }())

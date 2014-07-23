@@ -1,0 +1,2 @@
+boobies:
+	jshint pub/*.js
