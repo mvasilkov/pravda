@@ -6,9 +6,17 @@ Array.prototype.__map = function (fn) {
     return res
 }
 
+Array.prototype.__pop_random = function () {
+    var i = Math.floor(Math.random() * this.length)
+    var res = this[i]
+    this.splice(i, 1)
+    return res
+}
+
 function watch_the_world_burn() {
+    var _BD = BD.slice()
     $('#gen').empty().append(Array(5).__map(function () {
-        var headline = BD.__select()
+        var headline = _BD.__pop_random()
         if (typeof headline == 'function')
             headline = headline()
         return $('<li>').text(wto(headline))
