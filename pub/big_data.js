@@ -254,6 +254,7 @@ BD = [
     person+" назвал "+abs_quality+" идеалом русского народа",
     "Жительница "+from_city+" ударила пенсионерку "+hit_with+" за осуждающий взгляд",
     national+" "+profession+" насчитал в плену у ополченцев "+rnd(10, 40)+"0 человек",
-    cap_enemies+" "+did_action_object+" в православном храме "+from_city
+    cap_enemies+" "+did_action_object+" в православном храме "+from_city,
+    "По сообщениям МИД РФ "+person+" съебал из сраной Рашки, спиздив сраный "+crafted
 ]
 }())
