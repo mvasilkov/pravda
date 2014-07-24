@@ -2,6 +2,9 @@ var BD
 (function () {
 function mkt(variants) { return '#{' + variants.join('#') + '}' }
 function rnd(from, to) { return from + (Math.random() * (1+to-from)|0) }
+// lowercase first letter mkt()
+function lc1mkt(xs) { return mkt(xs.map(function (x) {
+    return x[0].toLowerCase()+x.substr(1) })) }
 
 var from_city = mkt([
     "Мурманска",
@@ -89,6 +92,14 @@ var airport = mkt([
     "Пулково",
     "Домодедово",
     "Шереметьево"
+])
+
+var where_hole = mkt([
+    "Туркменистане",
+    "Таджикистане",
+    "Казахстане",
+    "Индонезии",
+    "Намибии"
 ])
 
 var stuffed_toy_of = mkt([
@@ -214,19 +225,30 @@ var crafted = mkt([
     "Храм Христа Спасителя"
 ])
 
-var person = mkt([
+
+var raw_person = [
     "Патриарх Московский и всея Руси Кирилл",
     "Великий русский писатель Александр Сергеевич Пушкин",
     "Исламский пророк Мухаммад",
     "Князь тьмы Сатана",
     "Депутат «Справедливой России» Олег Пахолков",
-    "Канцлер Германии Ангела Меркель",
+    // TODO: needs sex change
+    // "Канцлер Германии Ангела Меркель",
     "Генеральный директор Первого канала Константин Эрнст"
-])
+]
+
+var person = mkt(raw_person)
+var lc1person = lc1mkt(raw_person)
 
 var person_generic = mkt([
     national+" "+profession,
     person
+])
+
+var imbecile_generic = mkt([
+    "Б-г",
+    profession,
+    lc1person
 ])
 
 var abs_quality = mkt([
@@ -239,7 +261,18 @@ var abs_quality = mkt([
     "коммутативность",
     "компланарность",
     "невостребованность",
-    "застенчивость"
+    "застенчивость",
+    "соборность",
+    "державность",
+    "народность"
+])
+
+var bbpe = mkt([
+    "пенсионерку",
+    "революционерку",
+    "канонерку",
+    "феминистку",
+    "морскую свинку"
 ])
 
 var hit_with = mkt([
@@ -249,6 +282,11 @@ var hit_with = mkt([
     "мусорным баком",
     "ногой с разворота",
     "гаечным ключом 24 на 30"
+])
+
+var innocent_attrib = mkt([
+    "осуждающий взгляд",
+    "болезненный вид"
 ])
 
 var cap_enemies = mkt([
@@ -261,24 +299,61 @@ var cap_enemies = mkt([
     "Котики"
 ])
 
+var national_attrib = mkt([
+    "письменность",
+    "духовность",
+    "коммутативность",
+    "компланарность",
+    "школьная программа",
+    "гравитация",
+    "Новая Зеландия"
+])
+
+var seeking_refuge = mkt([
+    "украинцев",
+    "африканцев",
+    "исламистов",
+    "фундаменталистов",
+    "ополченцев"
+])
+
+var give_out_to = mkt([
+    "миграционную службу",
+    "пункт приема металлолома",
+    "поликлинику для опытов",
+    "приют для бездомных животных"
+])
+
+var without_class = mkt([
+    "духовенства",
+    "дворянства",
+    "профсоюза",
+    "Аллаха",
+    "Сатаны"
+])
+
 BD = [
     function () {
         return "В "+where_politics+" нашли "+rnd(10, 20)+" "+crippled+" депутатов" },
     "В "+airport+" у пассажиров из "+from_city+" отобрали и "+did_action_object,
     function () {
-        return "Министр "+ministry_of+" "+from_country+" потребовал забыть слово <span>"+
-            unrelated_word+"&lt;/span> к концу "+rnd(2014, 2020)+" года" },
+        return "Министр "+ministry_of+" "+from_country+" потребовал забыть слово "+
+            unrelated_word+" к концу "+rnd(2014, 2020)+" года" },
     "Мизулина обвинила "+object_act_on+" в развратных действиях против детей",
     "В "+to_city+" привезли святыню, которая поможет "+do_stuff,
     function () {
-        return "Выпавший из "+out_from+" пассажир пробежал "+rnd(5, 20)+
+        return "Выпавший из "+out_from+" пассажир пробежал "+rnd(10, 20)+
             " километров по "+where_biome },
     person_generic+" нашел себе работу поинтереснее",
     national_plural+" умельцы собрали из мусора "+crafted,
     person+" назвал "+abs_quality+" идеалом русского народа",
-    "Жительница "+from_city+" ударила пенсионерку "+hit_with+" за осуждающий взгляд",
+    "Жительница "+from_city+" ударила "+bbpe+" "+hit_with+" за "+innocent_attrib,
     national+" "+profession+" насчитал в плену у ополченцев "+rnd(10, 40)+"0 человек",
     cap_enemies+" "+did_action_object+" в православном храме "+from_city,
-    "По сообщениям МИД РФ "+person+" съебал из сраной Рашки, спиздив сраный "+crafted
+    "В "+where_hole+" в рамках возрождения национальной культуры отменена "+national_attrib,
+    "По сообщениям МИД РФ, "+lc1person+" съебал из сраной Рашки, спиздив сраный "+crafted,
+    "ФМС: Мурманчане приглашают к себе "+seeking_refuge+", а потом сдают в "+give_out_to,
+    "В одном из храмов "+from_country+" снимали порнографию без разрешения "+without_class,
+    "Голый мужчина в центре "+from_city+" доказывал прохожим, что он "+imbecile_generic
 ]
 }())
