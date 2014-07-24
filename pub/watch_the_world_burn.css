@@ -15,6 +15,14 @@ body {
     padding-bottom: 50px;
 }
 
+img {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    height: 120px;
+    margin-right: -60px;
+}
+
 h1 {
     color: #bdc3c7;
     font: 45px;
@@ -31,6 +39,7 @@ h1 {
     outline: 0;
     margin-top: 15px;
     float: right;
+    text-transform: uppercase;
 }
 
 #gen {
