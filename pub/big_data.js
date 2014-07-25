@@ -355,6 +355,9 @@ BD = [
     "По сообщениям МИД РФ, "+lc1person+" съебал из сраной Рашки, спиздив сраный "+crafted,
     "ФМС: Мурманчане приглашают к себе "+seeking_refuge+", а потом сдают в "+give_out_to,
     "В одном из храмов "+from_country+" снимали порнографию без разрешения "+without_class,
-    "Голый мужчина в центре "+from_city+" доказывал прохожим, что он "+imbecile_generic
+    "Голый мужчина в центре "+from_city+" доказывал прохожим, что он "+imbecile_generic,
+    "Сотни "+seeking_refuge+" ищут "+give_out_to+" для совершения обряда во славу "+without_class,
+    "Житель "+from_city+" призвал "+do_stuff+" ради спасения "+crippled+" "+seeking_refuge,
+    cap_enemies+" "+from_country+" на молодежном политическом форуме Селигер "+rnd(10, 20)+" раз "+did_action_object
 ]
 }())
