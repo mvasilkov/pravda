@@ -361,20 +361,25 @@ var without_class = mkt([
 BD = [
     function () {
         return "В "+where_politics+" нашли "+rnd(10, 20)+" "+crippled+" депутатов" },
-    "В "+airport+" у пассажиров из "+from_city+" отобрали и "+did_action_object,
     function () {
         return "Министр "+ministry_of+" "+from_country+" потребовал забыть слово "+
             unrelated_word+" к концу "+rnd(2014, 2020)+" года" },
-    "Мизулина обвинила "+object_act_on+" в развратных действиях против детей",
-    "В "+to_city+" привезли святыню, которая поможет "+do_stuff,
     function () {
         return "Выпавший из "+out_from+" пассажир пробежал "+rnd(10, 20)+
             " километров по "+where_biome },
+    function () {
+        return national+" "+profession+" насчитал в плену у ополченцев "+
+        rnd(10, 40)+"0 человек" },
+    function () {
+        return cap_enemies+" "+from_country+" на молодежном политическом форуме «Селигер» "+
+        rnd(10, 20)+" раз "+did_action_object},
+    "Мизулина обвинила "+object_act_on+" в развратных действиях против детей",
+    "В "+to_city+" привезли святыню, которая поможет "+do_stuff,
+    "В "+airport+" у пассажиров из "+from_city+" отобрали и "+did_action_object,
     person_generic+" нашел себе работу поинтереснее",
     national_plural+" умельцы собрали из мусора "+crafted,
     person+" назвал "+abs_quality+" идеалом русского народа",
     "Жительница "+from_city+" ударила "+bbpe+" "+hit_with+" за "+innocent_attrib,
-    national+" "+profession+" насчитал в плену у ополченцев "+rnd(10, 40)+"0 человек",
     cap_enemies+" "+did_action_object+" в православном храме "+from_city,
     "В "+where_hole+" в рамках возрождения национальной культуры отменена "+national_attrib,
     "По сообщениям МИД РФ, "+lc1person+" съебал из сраной Рашки, спиздив сраный "+crafted,
@@ -383,7 +388,6 @@ BD = [
     "Голый мужчина в центре "+from_city+" доказывал прохожим, что он "+imbecile_generic,
     "Сотни "+seeking_refuge+" ищут "+give_out_to+" для совершения обряда во славу "+without_class,
     "Житель "+from_city+" призвал "+do_stuff+" ради спасения "+crippled+" "+seeking_refuge,
-    cap_enemies+" "+from_country+" на молодежном политическом форуме Селигер "+rnd(10, 20)+" раз "+did_action_object,
     "Несколько "+seeking_refuge+" устроили пьяную драку в "+where_politics+" и сломали "+crafted,
     "«Слово "+unrelated_word+" является наиважнейшей духовной скрепой Русского Народа», заявил министр"+ministry_of+" Российской Федерации"
 ]
