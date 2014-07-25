@@ -40,6 +40,8 @@ h1 {
     margin-top: 15px;
     float: right;
     text-transform: uppercase;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #gen {
