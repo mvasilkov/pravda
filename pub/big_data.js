@@ -1,6 +1,7 @@
 var BD
 (function () {
 function mkt(variants) { return '#{' + variants.join('#') + '}' }
+function maybe(option) { return mkt([option, '']) }
 function rnd(from, to) { return from + (Math.random() * (1+to-from)|0) }
 // lowercase first letter mkt()
 function lc1mkt(xs) { return mkt(xs.map(function (x) {
@@ -23,8 +24,8 @@ var from_city = mkt([
     "Челябинска",
     "Биробиджана",
     "Сыктывкара",
-    // TODO: make this nicer
-    "#{советской#} антарктической #{базы#станции} Дружная-#{1#2#3#4}"
+    maybe("советской ")+"антарктической "+mkt(["базы", "станции"])+
+        " Дружная-"+mkt([1, 2, 3, 4])
 ])
 
 var to_city = mkt([
@@ -381,12 +382,13 @@ BD = [
             "0 человек" },
     cap_enemies+" "+did_action_object+" в православном храме "+from_city,
     "В "+where_hole+" в рамках возрождения национальной культуры отменена "+national_attrib,
-    "По сообщениям МИД РФ, "+lc1person+" съебал из сраной Рашки, спиздив сраный "+crafted,
+    "По сообщениям МИД РФ, "+lc1person+" съебывает из сраной Рашки, спиздив сраный "+crafted,
     "ФМС: Мурманчане приглашают к себе "+seeking_refuge+", а потом сдают в "+give_out_to,
     "В одном из храмов "+from_country+" снимали порнографию без разрешения "+without_class,
     "Голый мужчина в центре "+from_city+" доказывал прохожим, что он "+imbecile_generic,
-    "Сотни "+seeking_refuge+" ищут "+give_out_to+" для совершения духовного обряда во славу "+
-        without_class,
+    // FIXME: совсем ахинея
+    // "Сотни "+seeking_refuge+" ищут "+give_out_to+" для совершения духовного обряда во славу "+
+    //     without_class,
     "Житель "+from_city+" призвал "+do_stuff+" ради спасения "+crippled+" "+seeking_refuge,
     "Несколько "+seeking_refuge+" устроили "+made_fight+" в "+where_politics+" и сломали "+
         crafted,
