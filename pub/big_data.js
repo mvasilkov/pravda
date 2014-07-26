@@ -409,6 +409,8 @@ BD = [
     "Несколько "+seeking_refuge+" устроили "+made_fight+" в "+where_politics+maybe(" и сломали "+
         crafted),
     cap_object+" является важнейшей духовной скрепой русского народа, заявил министр "+
-        ministry_of+" Российской Федерации"
+        ministry_of+" Российской Федерации",
+    national_plural+" власти подадут иск в международный суд на жителя "+from_country+
+        " за требование "+do_stuff,
 ]
 }())
