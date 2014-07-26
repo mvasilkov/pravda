@@ -6,6 +6,9 @@ function rnd(from, to) { return from + (Math.random() * (1+to-from)|0) }
 // lowercase first letter mkt()
 function lc1mkt(xs) { return mkt(xs.map(function (x) {
     return x[0].toLowerCase()+x.substr(1) })) }
+// uppercase first letter mkt()
+function uc1mkt(xs) { return mkt(xs.map(function (x) {
+    return x[0].toUpperCase()+x.substr(1) })) }
 
 var from_city = mkt([
     "Мурманска",
@@ -128,6 +131,19 @@ var stuffed_toy_of = mkt([
 ])
 
 var stuffed_toy = "чучело "+stuffed_toy_of
+
+var cap_object = uc1mkt([
+    "борщ",
+    "сало",
+    "маца",
+    "айфон",
+    "пирожок",
+    "банка сгущенки",
+    "крейсер «Аврора»",
+    "спутник Глонасс-М",
+    "Храм Христа Спасителя",
+    "чучело "+stuffed_toy_of
+])
 
 var object_act_on = mkt([
     "борщ",
@@ -390,9 +406,9 @@ BD = [
     // "Сотни "+seeking_refuge+" ищут "+give_out_to+" для совершения духовного обряда во славу "+
     //     without_class,
     "Житель "+from_city+" призвал "+do_stuff+" ради спасения "+crippled+" "+seeking_refuge,
-    "Несколько "+seeking_refuge+" устроили "+made_fight+" в "+where_politics+" и сломали "+
-        crafted,
-    "Слово "+unrelated_word+" является важнейшей духовной скрепой русского народа, заявил министр "+
+    "Несколько "+seeking_refuge+" устроили "+made_fight+" в "+where_politics+maybe(" и сломали "+
+        crafted),
+    cap_object+" является важнейшей духовной скрепой русского народа, заявил министр "+
         ministry_of+" Российской Федерации"
 ]
 }())
