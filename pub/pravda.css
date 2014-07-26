@@ -9,6 +9,8 @@ body {
     max-width: 700px;
 }
 
+.header { margin-bottom: -20px; }
+
 h1 {
     color: #bdc3c7;
     font: 45px/50px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
@@ -32,7 +34,8 @@ h1 {
     background: #e74c3c;
     border: 0;
     color: #fff;
+    cursor: pointer;
+    float: right;
     font: 25px/33px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
-    margin-top: 20px;
     outline: 0;
 }
