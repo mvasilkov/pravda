@@ -152,6 +152,9 @@ var to_country = mkt([
     "Нигер"
 ])
 
+var from_anywhere = mkt([from_city, from_country])
+var to_anywhere = mkt([to_city, to_country])
+
 var national = mkt([
     "Российский",
     "Украинский",
@@ -267,7 +270,7 @@ var did_action_object = mkt([
     "осквернили святыни",
     "похитили иконы",
     "растоптали идеалы молодости",
-    "избили "+stuffed_toy_of
+    "избили чучело "+stuffed_toy_of
 ])
 
 var crippled = mkt([
@@ -278,7 +281,8 @@ var crippled = mkt([
     "безработных",
     "безногих",
     "безблагодатных",
-    "бестелесных"
+    "бестелесных",
+    "беспощадных"
 ])
 
 var ministry_of = mkt([
@@ -511,7 +515,16 @@ var without_class = mkt([
 var made_fight = mkt([
     "пьяную драку",
     "мировую войну",
-    "ледовое побоище"
+    "ледовое побоище",
+    "затяжные бои",
+    "смертельную битву"
+])
+
+var personal_edible = mkt([
+    "уголовное дело",
+    "астральное тело",
+    "духовное "+mkt(["развитие", "наследие"]),
+    "тяжелое детство"
 ])
 
 BD = [
@@ -543,11 +556,11 @@ BD = [
     // "Сотни "+seeking_refuge+" ищут "+give_out_to+" для совершения духовного обряда во славу "+
     //     without_class,
     "Житель "+from_city+" призвал "+do_stuff+" ради спасения "+crippled+" "+seeking_refuge,
-    "Несколько "+seeking_refuge+" устроили "+made_fight+" в "+where_politics+maybe(" и сломали "+
-        crafted),
+    "Несколько "+seeking_refuge+" устроили "+made_fight+" в "+where_politics,
     cap_object+" является важнейшей духовной скрепой русского народа, заявил министр "+
         ministry_of+" Российской Федерации",
     national_plural+" власти подадут иск в международный суд на жителя "+from_country+
         " за #{требование#попытку} "+do_stuff,
+    "Житель "+from_anywhere+" пытался съесть свое "+personal_edible
 ]
 }())
