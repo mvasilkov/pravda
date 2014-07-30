@@ -1,4 +1,4 @@
-Лента.рф
+[Лента.рф][0]
 --------
 > Мурманчане приглашают к себе украинцев, а потом сдают в поликлинику для опытов
 
@@ -25,5 +25,6 @@
 #### Вы все поехавшие, вы понимаете что вы все поехавшие?
 Обычно да, но прямо сейчас да.
 
+[0]: http://lenta.ru.animuchan.net/
 [1]: https://github.com/mvasilkov/pravda
 [2]: https://github.com/mvasilkov/pravda/blob/master/pub/big_data.js
