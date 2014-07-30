@@ -1,6 +1,6 @@
 body {
     background: #fff;
-    color: #7f8c8d;
+    color: #110f10;
     font: 25px/33px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
 }
 
@@ -9,13 +9,41 @@ body {
     max-width: 700px;
 }
 
-.header { margin-bottom: -20px; }
+.header {
+    position: relative;
+    margin-bottom: -20px;
+}
+
+.lenin {
+    position: absolute;
+    left: 50%;
+    margin-left: -125px;
+    top: -30px;
+    z-index: -1;
+}
 
 h1 {
-    color: #bdc3c7;
+    color: #110f10;
     font: 45px/50px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
     margin: 0;
     padding: 0;
+    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff;
+}
+
+h2, h3 {
+    color: #363b3f;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font: 28px/32px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font: 22px/25px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
+    margin-top: 10px;
 }
 
 #gen {
@@ -38,4 +66,19 @@ h1 {
     float: right;
     font: 25px/33px 'PT Sans Narrow', 'Segoe UI', 'PT Sans', 'Helvetica Neue', 'FreeSans', sans-serif;
     outline: 0;
+}
+
+.actions {
+    background: #fbfbfb;
+    border: 5px solid #e9edf1;
+    margin-top: 75px;
+    padding: 20px 25px;
+}
+
+.ib { display: inline-block; }
+
+h3 a {
+    border-bottom: 2px solid #3b9edd;
+    color: #3b9edd;
+    text-decoration: none;
 }
